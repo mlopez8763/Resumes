@@ -1,0 +1,324 @@
+%-------------------------
+% title: 	Resume in Latex
+% author: 	Miguel Lopez
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.0cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+	\vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+	\item{
+		\textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+	}
+}
+
+\newcommand{\resumePOR}[3]{
+	\vspace{0.5mm}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+	\end{tabular*}
+	\vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+	\vspace{0.5mm}\item
+	\begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & \textit{\footnotesize{#4}} \\
+		\textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+	\end{tabular*}
+	\vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+	\vspace{0.5mm}\item
+	\begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & \textit{\footnotesize{#3}} \\
+		\footnotesize{\textit{#2}} & \footnotesize{#4}
+	\end{tabular*}
+	\vspace{-4.25mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+	\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+		\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+				
+				\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+			\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+		\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+	\vspace{2mm}
+	\begin{tcolorbox}
+		\textbf{\large #1}
+	\end{tcolorbox}
+	\vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{\Huge{Miguel A. Lopez}} % Your Name
+\newcommand{\course}{Aerospace Engineering - Undergraduate Student} % Your Program
+\newcommand{\roll}{1213861270} % Your Roll No.
+\newcommand{\phone}{480-358-8634} % Your Phone Number
+\newcommand{\emaila}{malope67@asu.edu} %Email 1
+\newcommand{\emailb}{miguel.l.business@gmail.com} %Email 2
+
+
+
+
+\begin{document}
+	\fontfamily{cmr}\selectfont
+	%----------HEADING-----------------
+	
+	
+	\parbox{2.35cm}{%
+		%\includegraphics[width=2.35cm,clip]{asulogo.png}
+	}
+	\parbox{\dimexpr\linewidth-0.0cm\relax}{
+		\begin{tabularx}{\linewidth}{L r} \\
+			\textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ \phone}\\
+			%{Roll No.: \roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+			\course & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}}\\
+			%{BS in Engineering} &  \href{https://github.com/mlopez8763}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {mlopez8763}} \\
+			{(Astronautics)} &  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\
+			{B.S.E.} & \href{www.linkedin.com/in/miguel-lopez-242628a2}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {Miguel Lopez}}
+		\end{tabularx}
+	}
+	% \parbox{3.0cm}{%
+		% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+		% }
+	
+	%-----------SUMMARY-----------
+	\section{\textbf{Summary}}
+	\begin{itemize}[leftmargin=0.05in, label={}]
+		\small{\item{
+				\textbf{}{BSE Astronautical engineer with systems engineering internship experience holding an interest in avionics, state estimation, and GNC seeking a full-time position May 2025.} \\
+		}}
+	\end{itemize}
+	\vspace{-7.5mm}
+	%
+	
+	
+	%-----------EDUCATION-----------
+	\section{\textbf{Education}}
+	\resumeSubHeadingListStart
+	\resumeSubheading
+	{Arizona State University - Ira A. Fulton School of Engineering}{	}
+	{Aerospace Engineering (Astronautics)}{Present - May, 2025}
+	\resumeSubHeadingListEnd
+	\vspace{-7.5mm}
+	%
+	
+	
+	
+	%-----------EXPERIENCE-----------------
+	\section{\textbf{Experience}}
+	\resumeSubHeadingListStart
+	
+	\resumeSubheading
+	{RTX - Collins Aerospace}{Phoenix, Arizona}
+	{Project Engineer}{May, 2024 - Present}
+	\vspace{-2.0mm}
+	\resumeItemListStart
+	\item {Responsible for compiling and validating requirements throughout different system levels and trace them in DOORS}
+	\item {Responsible for leading team meetings to determine project responsibilities and release testing specifications}
+	\item {Used root cause corrective analyses to investigate product defects and prevent escapes}
+	\resumeItemListEnd
+	
+	\vspace{-5.0mm}
+	
+	\resumeSubheading
+	{ASU - Teaching Assistant \& Grader}{Tempe, Arizona}
+	{System Dynamics \& Control Systems}{August, 2023 - Present}
+	\vspace{-2.0mm}
+	\resumeItemListStart
+	\item {Aid during lecture activities and supplement student learning}
+	\item {Hold weekly office hours and answer student questions and concerns regarding control theory}
+	\item {Grading of weekly student exams and exam corrections}
+	\resumeItemListEnd
+	
+	\vspace{-5.0mm}
+	
+	\resumeSubheading
+	{ASU - Teaching Assistant}{Tempe, Arizona}
+	{Rigid Body Statics}{August, 2022 - December, 2022}
+	\vspace{-2.0mm}
+	\resumeItemListStart
+	\item {Provided support to the professor by conducting tutorial sessions and assisting with class administration}
+	\item {Explaining complex engineering principles and concepts in a clear and concise manner}
+	\item{Offered guidance to students by addressing their questions and clarifying doubts on their assignments and projects}
+	\resumeItemListEnd
+	
+	\vspace{-4.0mm}
+	
+	\resumeSubHeadingListEnd
+	\vspace{-8.5mm}
+	
+	
+	
+	%-----------PROJECTS-----------------
+	\section{\textbf{Projects}}
+	\resumeSubHeadingListStart
+	
+	\resumeProject
+	{NASA 2025 RASC-AL Finalists - DIANA, Lunar Maintenance Robot}
+	{Design a lunar rover that can be operated remotely to perform maintenance tasks}
+	{August, 2024 - Present}
+	
+	\resumeItemListStart
+		\item Team Lead in a group of 9 engineering students, overseeing meeting agendas and tasks
+		\item Responsible for design choices in command \& data handling and telemetry tracking \& control systems
+	\resumeItemListEnd
+	\vspace{-3mm}
+	
+	\resumeProject
+	{Active Control Flight Computer - Solo Project} %Project Name
+	{Design and development of PCB that can control vehicle attitude and deliver live telemetry} %Project Name, Location Name
+	{September, 2024 - Present} %Event Dates
+	
+	\resumeItemListStart
+	\item {Writing of spacial algorithms and extended Kalman filtering to improve attitude estimation}
+	\item {Writing of device drivers with the usage of hardware abstraction library (HAL) for peripheral sensors}
+	\item {Hand picked SMT parts that will be soldered onto the board}
+	\item {This is an ongoing project that will be used in personal NAR high-powered rockets}
+	\resumeItemListEnd
+	\vspace{-4mm}
+	
+	\resumeProject
+	{Auto Strummer - Solo Project} %Project Name
+	{Conceptual design of an autonomous robot that can play the guitar} %Project Name, Location Name
+	{April, 2023 - May, 2023} %Event Dates
+	
+	\resumeItemListStart
+	\item {Consulted with professors to design state space of the system}
+	\item {Modeled state space to determine necessary gain via pole placement and eigenvalue theory}
+	\item {The robot can autonomously adjust the force at which the guitar is strummed to adjust volume}
+	\resumeItemListEnd
+	\vspace{-5mm}
+	
+	
+	\resumeSubHeadingListEnd
+	\vspace{-5.5mm}
+	
+	
+	
+	%-----------Technical skills-----------------
+	\section{\textbf{Technical Skills and Interests}}
+	\begin{itemize}[leftmargin=0.05in, label={}]
+		\small{\item{
+				\textbf{Languages (Human)}{: English, Spanish} \\
+				\textbf{Languages (Machine)}{: C++,C, LaTex, MATLAB, Mint Linux}\\
+				\textbf{Developer Tools}{: Simulink, MATLAB, KiCAD, ANSYS, Visual Studio, STM32Cube IDE, Konsole, Microsoft Excel} \\
+				\textbf{Soft Skills}{: Java, Python, Arduino IDE} \\
+				\textbf{Areas of Interest}{: Avionics, GNC, Attitude Estimation, Test \& Validation, Control Theory, Propulsion} \\
+		}}
+	\end{itemize}
+	\vspace{-16pt}
+	
+	
+	
+	%-----------Positions of Responsibility-----------------
+	\section{\textbf{Extracurricular/Clubs}}
+	\vspace{-0.4mm}
+	\resumeSubHeadingListStart
+	\resumePOR{Team Lead, }{NASA RASC-AL Finalist Team}{August, 2024 - Present}
+	\resumePOR{Avionics Lead, } % Position
+	{SEDS Rocketry Division} %Club,Event
+	{August, 2022 - February, 2024} %Tenure Period
+	\resumePOR{Plumbing and Avionics Team Member, } % Position
+	{Sun Devil Rocketry} %Club,Event
+	{September, 2022 - December, 2023} %Tenure Period
+	\resumeSubHeadingListEnd
+	\vspace{-6.5mm}
+	
+	
+	
+	
+	%-----------Achievements-----------------
+	\begin{comment}
+		\section{\textbf{Achievements}}
+		\vspace{-0.4mm}
+		\resumeSubHeadingListStart
+		\resumePOR{Achievement } % Award
+		{description} % Event
+		{Event dates} %Event Year
+		
+		\resumePOR{Achievement } % Award
+		{description} % Event
+		{Event dates} %Event Year
+		\resumeSubHeadingListEnd
+		\vspace{-5mm}
+	\end{comment}
+	
+	
+	%-------------------------------------------
+\end{document}
